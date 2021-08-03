@@ -6,22 +6,22 @@ pipeline {
     stage('Startup') {
       steps {
         script {
-          sh 'npm install'
+          bat 'npm install'
         }
       }
     }
     stage('Test') {
       steps {
         script {
-          sh 'npm run test'
+          bat 'npm run test'
         }
       }
-    }
+
     stage('Build') {
       steps {
         script {
-          sh 'npm start'
-          sh 'npm pack'
+          bat 'npm start'
+          bat 'npm pack'
         }
       }
     }
