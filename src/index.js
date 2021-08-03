@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import RouterDemo from './component/RouterDemo';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import Addition from './component/Addition';
+// import Addtion_of_two_numbers from './component/Addition_of_two_numbers';
+// import CrudOperation from './component/CrudOperation';
+// import Router from './component/Router';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <Addition msg = "science-book" msg1="arts-book"/>
+    <Addition msg = "social-book"/> */}
+    {/* <Addtion_of_two_numbers/> */}
+    <RouterDemo/>
   </React.StrictMode>,
   document.getElementById('root')
 );
