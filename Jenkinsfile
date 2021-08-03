@@ -10,12 +10,12 @@ pipeline {
         }
       }
     }
-    stage('Test') {
-      steps {
-        script {
-          bat 'npm run test'
-        }
-      }
+//     stage('Test') {
+//       steps {
+//         script {
+//           bat 'npm run test'
+//         }
+//       }
 
     stage('Build') {
       steps {
@@ -26,4 +26,4 @@ pipeline {
       }
     }
   }
-}
+ }
