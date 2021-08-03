@@ -5,9 +5,7 @@ pipeline {
   stages {
     stage('Startup') {
       steps {
-        script {
           bat 'npm install'
-        }
       }
     }
 //     stage('Test') {
@@ -19,10 +17,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        script {
-          bat 'npm start'
-          bat 'npm pack'
-        }
+          bat 'npm run build'
       }
     }
   }
