@@ -17,23 +17,23 @@ buildDiscarder(logRotator(numToKeepStr: '4', daysToKeepStr: '7', artifactDaysToK
 tools { nodejs "npm"}
 
 
-stages{
-stage('Build') {
-steps {
-//bat 'rm -rf node_modules'
-echo 'npm install '
-}
-}
-stage(' Test') {
-steps {
-echo 'npm run test --passWithNoTests'
-}
-}
-stage('Code Coverage') {
-steps {
-echo 'npm run coverage'
-}
-}
+// stages{
+// stage('Build') {
+// steps {
+// //bat 'rm -rf node_modules'
+// echo 'npm install '
+// }
+// }
+// stage(' Test') {
+// steps {
+// echo 'npm run test --passWithNoTests'
+// }
+// }
+// stage('Code Coverage') {
+// steps {
+// echo 'npm run coverage'
+// }
+// }
 
 
 
@@ -70,18 +70,18 @@ error "Quality Gate Failed"
 }
 }
 
-stage ('Docker Build'){
-steps{
-//sh "docker build . -t ${REPOSITORY_NAME}/${MICROSERVICE_NAME}" 
-echo 'Build'
-}
-}
+// stage ('Docker Build'){
+// steps{
+// //sh "docker build . -t ${REPOSITORY_NAME}/${MICROSERVICE_NAME}" 
+// echo 'Build'
+// }
+// }
 
-stage ('Deploy'){
-steps{
-echo 'Deploy Docker Image in AWS '
-}
-}
+// stage ('Deploy'){
+// steps{
+// echo 'Deploy Docker Image in AWS '
+// }
+// }
 
 }
 post {
