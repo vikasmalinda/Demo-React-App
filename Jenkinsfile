@@ -27,7 +27,7 @@ pipeline {
     // }
     stage('Code Coverage') {
       steps {
-        echo 'npm run coverage'
+        bat 'npm run coverage'
       }
     }
     stage('SonarQube Analysis') {
