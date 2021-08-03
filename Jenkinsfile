@@ -26,7 +26,7 @@ bat 'npm install '
 }
 stage(' Test') {
 steps {
-bat 'npm run test'
+bat 'npm run test --passWithNoTests'
 }
 }
 stage('Code Coverage') {
