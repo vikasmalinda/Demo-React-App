@@ -17,12 +17,12 @@ pipeline {
     stage('Build') {
       steps {
         //bat 'rm -rf node_modules'
-        echo 'npm install '
+        bat 'npm install '
       }
     }
     stage(' Test') {
       steps {
-        echo 'npm run test --passWithNoTests'
+        bat 'npm run test --passWithNoTests'
       }
     }
     stage('Code Coverage') {
