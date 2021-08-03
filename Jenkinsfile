@@ -62,6 +62,7 @@ script {
 qualityGateResult = waitForQualityGate()
 println qualityGateResult.status// Quality Gate Status (Can be used for conditional equations)
 //println qualityGateResult.conditions
+qualityGateResult.conditions.each(println it)
 if (qualityGateResult.status != 'OK') {
 error "Quality Gate Failed"
 }
