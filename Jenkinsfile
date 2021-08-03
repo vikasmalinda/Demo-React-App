@@ -26,7 +26,7 @@ bat 'npm install '
 }
 stage(' Test') {
 steps {
-bat 'CI=true npm run test'
+bat 'npm run test'
 }
 }
 stage('Code Coverage') {
