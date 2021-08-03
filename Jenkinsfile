@@ -46,7 +46,7 @@ script {
 withSonarQubeEnv(SONAR_SERVER_NAME) { 
 // If you have configured more than one global server connection,
 //you can specify its name
-bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.sources=."
+bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.sources=. -Dsonar.exclusions=node_modules/**"
 }
 }
 }
