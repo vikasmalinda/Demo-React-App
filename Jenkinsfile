@@ -61,7 +61,7 @@ script {
 // Waits for Quality Gate Results through Webhook
 qualityGateResult = waitForQualityGate()
 println qualityGateResult.status// Quality Gate Status (Can be used for conditional equations)
-println qualityGateResult.conditions
+//println qualityGateResult.conditions
 if (qualityGateResult.status != 'OK') {
 error "Quality Gate Failed"
 }
