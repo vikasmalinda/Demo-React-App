@@ -16,7 +16,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'rmdir /s node_modules'
+        bat 'rm -r node_modules'
         bat 'npm install '
       }
     }
