@@ -20,7 +20,7 @@ tools { nodejs "npm"}
 stages{
 stage('Build') {
 steps {
-bat 'rm -rf node_modules'
+//bat 'rm -rf node_modules'
 bat 'npm install '
 }
 }
